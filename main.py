@@ -44,7 +44,7 @@ def load_existing_courses():
     if os.path.exists('courses.yml'):
         with open('courses.yml', 'r', encoding='utf-8') as file:
             return yaml.safe_load(file)
-    return {}
+    return []
 
 
 def save_courses(courses):
