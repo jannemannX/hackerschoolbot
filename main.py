@@ -135,7 +135,7 @@ def main():
             new_courses.append(e)
 
     if new_courses:
-        loop.run(post_new_courses(new_courses))
+        loop.run_until_complete(post_new_courses(new_courses))
         save_courses(current_courses)
         logging.info("New courses found and posted.")
     else:
