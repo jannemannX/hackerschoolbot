@@ -136,7 +136,7 @@ def main():
 
     if new_courses:
         loop.run_until_complete(post_new_courses(new_courses))
-        save_courses(current_courses)
+        save_courses(existing_courses + new_courses)
         logging.info("New courses found and posted.")
     else:
         logging.info("No new courses found.")
